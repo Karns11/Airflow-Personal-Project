@@ -1,0 +1,19 @@
+[2024-09-02T23:34:19.556+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-09-02T23:34:19.575+0000] {taskinstance.py:2603} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: localIngestionDag.ingestData manual__2024-09-02T23:34:14.275778+00:00 [queued]>
+[2024-09-02T23:34:19.586+0000] {taskinstance.py:2603} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: localIngestionDag.ingestData manual__2024-09-02T23:34:14.275778+00:00 [queued]>
+[2024-09-02T23:34:19.587+0000] {taskinstance.py:2856} INFO - Starting attempt 1 of 1
+[2024-09-02T23:34:19.602+0000] {taskinstance.py:2879} INFO - Executing <Task(PythonOperator): ingestData> on 2024-09-02 23:34:14.275778+00:00
+[2024-09-02T23:34:19.609+0000] {standard_task_runner.py:72} INFO - Started process 93 to run task
+[2024-09-02T23:34:19.613+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'localIngestionDag', 'ingestData', 'manual__2024-09-02T23:34:14.275778+00:00', '--job-id', '166', '--raw', '--subdir', 'DAGS_FOLDER/data_ingestion_local.py', '--cfg-path', '/tmp/tmpxhvqll6_']
+[2024-09-02T23:34:19.616+0000] {standard_task_runner.py:105} INFO - Job 166: Subtask ingestData
+[2024-09-02T23:34:19.670+0000] {task_command.py:467} INFO - Running <TaskInstance: localIngestionDag.ingestData manual__2024-09-02T23:34:14.275778+00:00 [running]> on host bddf3773cf31
+[2024-09-02T23:34:19.940+0000] {taskinstance.py:3122} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='localIngestionDag' AIRFLOW_CTX_TASK_ID='ingestData' AIRFLOW_CTX_EXECUTION_DATE='2024-09-02T23:34:14.275778+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-09-02T23:34:14.275778+00:00'
+[2024-09-02T23:34:19.942+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-09-02T23:34:20.100+0000] {logging_mixin.py:190} INFO - connection established
+[2024-09-02T23:34:22.056+0000] {logging_mixin.py:190} INFO - data inserted
+[2024-09-02T23:34:22.057+0000] {python.py:240} INFO - Done. Returned value was: None
+[2024-09-02T23:34:22.073+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-09-02T23:34:22.075+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=localIngestionDag, task_id=ingestData, run_id=manual__2024-09-02T23:34:14.275778+00:00, execution_date=20240902T233414, start_date=20240902T233419, end_date=20240902T233422
+[2024-09-02T23:34:22.117+0000] {local_task_job_runner.py:261} INFO - Task exited with return code 0
+[2024-09-02T23:34:22.281+0000] {taskinstance.py:3891} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-09-02T23:34:22.283+0000] {local_task_job_runner.py:240} INFO - ::endgroup::

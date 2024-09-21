@@ -1,0 +1,27 @@
+[2024-09-02T01:06:03.090+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-09-02T01:06:03.109+0000] {taskinstance.py:2603} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: localIngestionDag.ingest manual__2024-09-02T00:55:35.799937+00:00 [queued]>
+[2024-09-02T01:06:03.119+0000] {taskinstance.py:2603} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: localIngestionDag.ingest manual__2024-09-02T00:55:35.799937+00:00 [queued]>
+[2024-09-02T01:06:03.120+0000] {taskinstance.py:2856} INFO - Starting attempt 4 of 4
+[2024-09-02T01:06:03.136+0000] {taskinstance.py:2879} INFO - Executing <Task(BashOperator): ingest> on 2024-09-02 00:55:35.799937+00:00
+[2024-09-02T01:06:03.144+0000] {standard_task_runner.py:72} INFO - Started process 442 to run task
+[2024-09-02T01:06:03.147+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'localIngestionDag', 'ingest', 'manual__2024-09-02T00:55:35.799937+00:00', '--job-id', '15', '--raw', '--subdir', 'DAGS_FOLDER/data_ingestion_local.py', '--cfg-path', '/tmp/tmph43a_o7z']
+[2024-09-02T01:06:03.150+0000] {standard_task_runner.py:105} INFO - Job 15: Subtask ingest
+[2024-09-02T01:06:03.203+0000] {task_command.py:467} INFO - Running <TaskInstance: localIngestionDag.ingest manual__2024-09-02T00:55:35.799937+00:00 [running]> on host f86224e91cd0
+[2024-09-02T01:06:03.525+0000] {taskinstance.py:3122} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='localIngestionDag' AIRFLOW_CTX_TASK_ID='ingest' AIRFLOW_CTX_EXECUTION_DATE='2024-09-02T00:55:35.799937+00:00' AIRFLOW_CTX_TRY_NUMBER='4' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-09-02T00:55:35.799937+00:00'
+[2024-09-02T01:06:03.527+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-09-02T01:06:03.541+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2024-09-02T01:06:03.543+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'ls /opt/***']
+[2024-09-02T01:06:03.558+0000] {subprocess.py:86} INFO - Output:
+[2024-09-02T01:06:03.564+0000] {subprocess.py:93} INFO - ***.cfg
+[2024-09-02T01:06:03.566+0000] {subprocess.py:93} INFO - config
+[2024-09-02T01:06:03.567+0000] {subprocess.py:93} INFO - dags
+[2024-09-02T01:06:03.567+0000] {subprocess.py:93} INFO - logs
+[2024-09-02T01:06:03.568+0000] {subprocess.py:93} INFO - plugins
+[2024-09-02T01:06:03.569+0000] {subprocess.py:93} INFO - requirements.txt
+[2024-09-02T01:06:03.570+0000] {subprocess.py:93} INFO - webserver_config.py
+[2024-09-02T01:06:03.572+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2024-09-02T01:06:03.601+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-09-02T01:06:03.602+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=localIngestionDag, task_id=ingest, run_id=manual__2024-09-02T00:55:35.799937+00:00, execution_date=20240902T005535, start_date=20240902T010603, end_date=20240902T010603
+[2024-09-02T01:06:03.642+0000] {local_task_job_runner.py:261} INFO - Task exited with return code 0
+[2024-09-02T01:06:03.663+0000] {taskinstance.py:3891} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-09-02T01:06:03.666+0000] {local_task_job_runner.py:240} INFO - ::endgroup::

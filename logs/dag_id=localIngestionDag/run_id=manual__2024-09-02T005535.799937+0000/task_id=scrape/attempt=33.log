@@ -1,0 +1,19 @@
+[2024-09-02T02:45:03.545+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-09-02T02:45:03.563+0000] {taskinstance.py:2603} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: localIngestionDag.scrape manual__2024-09-02T00:55:35.799937+00:00 [queued]>
+[2024-09-02T02:45:03.573+0000] {taskinstance.py:2603} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: localIngestionDag.scrape manual__2024-09-02T00:55:35.799937+00:00 [queued]>
+[2024-09-02T02:45:03.574+0000] {taskinstance.py:2856} INFO - Starting attempt 33 of 33
+[2024-09-02T02:45:03.588+0000] {taskinstance.py:2879} INFO - Executing <Task(PythonOperator): scrape> on 2024-09-02 00:55:35.799937+00:00
+[2024-09-02T02:45:03.598+0000] {standard_task_runner.py:72} INFO - Started process 353 to run task
+[2024-09-02T02:45:03.602+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'localIngestionDag', 'scrape', 'manual__2024-09-02T00:55:35.799937+00:00', '--job-id', '94', '--raw', '--subdir', 'DAGS_FOLDER/data_ingestion_local.py', '--cfg-path', '/tmp/tmp_8k1ueif']
+[2024-09-02T02:45:03.604+0000] {standard_task_runner.py:105} INFO - Job 94: Subtask scrape
+[2024-09-02T02:45:03.654+0000] {task_command.py:467} INFO - Running <TaskInstance: localIngestionDag.scrape manual__2024-09-02T00:55:35.799937+00:00 [running]> on host b45b6f5764af
+[2024-09-02T02:45:03.917+0000] {taskinstance.py:3122} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='localIngestionDag' AIRFLOW_CTX_TASK_ID='scrape' AIRFLOW_CTX_EXECUTION_DATE='2024-09-02T00:55:35.799937+00:00' AIRFLOW_CTX_TRY_NUMBER='33' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-09-02T00:55:35.799937+00:00'
+[2024-09-02T02:45:03.919+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-09-02T02:45:04.430+0000] {logging_mixin.py:190} INFO - Downcasting floats.
+[2024-09-02T02:45:04.560+0000] {logging_mixin.py:190} INFO - saved to db. Num cols =  53
+[2024-09-02T02:45:04.562+0000] {python.py:240} INFO - Done. Returned value was: None
+[2024-09-02T02:45:04.573+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-09-02T02:45:04.574+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=localIngestionDag, task_id=scrape, run_id=manual__2024-09-02T00:55:35.799937+00:00, execution_date=20240902T005535, start_date=20240902T024503, end_date=20240902T024504
+[2024-09-02T02:45:04.619+0000] {local_task_job_runner.py:261} INFO - Task exited with return code 0
+[2024-09-02T02:45:04.834+0000] {taskinstance.py:3891} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-09-02T02:45:04.838+0000] {local_task_job_runner.py:240} INFO - ::endgroup::
